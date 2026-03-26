@@ -14,7 +14,7 @@ Créer une application permettant :
 - de localiser les laveries
 - de voir les machines disponibles
 - de connaître l’affluence
-- de consulter les tarifs
+- de consulter les tarifs 
 
 # 4. Objectifs
 - Réduire le temps d’attente
