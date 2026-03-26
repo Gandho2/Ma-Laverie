@@ -15,7 +15,7 @@ les tarifs de lavage et de séchage afin d'aider les utilisateurs à mieux organ
 - Frontend : HTML , CSS ,  JavaScript
 - Backend : Node js
 - Base de données : Mysql
-- Docker 
+- Docker  
 
 #  Fonctionnalités
 - Carte avec les laveries
