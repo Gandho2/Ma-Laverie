@@ -1,32 +1,51 @@
-# Ma-Laverie  
+#  Ma Laverie
 
-#  Description
-Ma Laverie est une application web dédiée aux laveries automotiques permettant de localiser les laveries et de voir en temps réel la disponibilité
-des machines, l'état des machines ainsi que le taux d'affluence dans une laverie donnée. L'application fournit également des informations pratiques comme
-les tarifs de lavage et de séchage afin d'aider les utilisateurs à mieux organiser leur passage et éviter les périodes de fortes affluence.
+##  Description
+Ma Laverie est une application web qui permet aux utilisateurs de trouver facilement des laveries et de consulter la disponibilité des machines en temps réel.
 
-# Objectifs
+Ce projet vise à répondre à un problème fréquent : ne pas savoir si une laverie est disponible avant de s’y rendre.
+
+##  Objectifs
 - Voir les laveries proches
-- Vérifier les machines disponibles
+- Vérifier la disponibilité des machines
 - Réduire le temps d’attente
-- éviter les fortes affluence et consulter les tarifs 
+- Éviter les périodes de forte affluence
+- Consulter les tarifs
 
-# Technologies
-- Frontend : HTML , CSS ,  JavaScript
-- Backend : Node js
-- Base de données : Mysql
-- Docker  
 
-#  Fonctionnalités
-- Carte avec les laveries
-- Statut des machines (libre / occupée /)
-- affluence des machines
-- Compte utilisateur
+## Utilisateurs cibles
+- Étudiants
+- Habitants urbains
+- Personnes sans machine à laver
 
-#  Installation
 
-'''bash 
-docker build -t ma-laverie-app 
-docker run -p 3000:3000 ma-laverie-app
-docker build -t laundry-app .
-docker run -p 3000:3000 laundry-app
+##  Technologies utilisées
+- Frontend : HTML, CSS, JavaScript
+- Backend : Node.js
+- Base de données : MySQL 
+- Conteneurisation : Docker
+- CI/CD : GitHub Actions
+
+## Structure du projet
+
+- index.js : serveur backend simple
+- Dockerfile : configuration du conteneur
+- .github/workflows/ci.yml : pipeline CI
+- cahier-des-charges.md : analyse du projet
+
+##  Fonctionnement
+
+Le projet contient un serveur Node.js simple qui retourne une liste de laveries avec leur état (libre ou occupée).
+
+Ce projet est une première version (prototype) permettant de démontrer le fonctionnement global de l’application.
+
+
+##  Installation et exécution
+
+### 1. Cloner le projet
+```bash
+git clone https://github.com/gandho2/ma-laverie.git
+cd ma-laverie
+```bash
+git clone https://github.com/ton-utilisateur/ma-laverie.git
+cd ma-laverie
