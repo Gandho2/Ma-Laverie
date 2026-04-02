@@ -40,6 +40,13 @@ Le projet contient un serveur Node.js simple qui retourne une liste de laveries 
 Ce projet est une première version (prototype) permettant de démontrer le fonctionnement global de l’application.
 
 
+## Gestion de projet
+
+Le projet est organisé avec GitHub Projects en suivant une approche Agile.
+
+Lien du board : https://github.com/users/Gandho2/projects/1/views/1
+
+
 ##  Installation et exécution
 
 ### 1. Cloner le projet
@@ -47,5 +54,5 @@ Ce projet est une première version (prototype) permettant de démontrer le fonc
 git clone https://github.com/gandho2/ma-laverie.git
 cd ma-laverie
 ```bash
-git clone https://github.com/ton-utilisateur/ma-laverie.git
+
 cd ma-laverie
