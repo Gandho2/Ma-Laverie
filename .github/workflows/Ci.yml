@@ -1,24 +1,27 @@
-name: CI
+name: CI Pipeline
 
 on:
   push:
-    branches: [ main ]
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Récupérer le code
+      - name: récupérer le code
         uses: actions/checkout@v3
 
-      - name: Installer Node.js
+      - name: installer node
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Installer dépendances
-        run: npm install
+      - name: installer dependances
+        run: npm install || echo "pas de dependances"
 
-      - name: Build
-        run: echo "Build OK"
+      - name: verifier syntaxe
+        run: node index.js
+
+      - name: build docker
+        run: docker build -t ma-laverie 
