@@ -1,29 +1,45 @@
 # Plan de sécurité — Ma Laverie
 
-## 1. Objectif
+## Objectif
 
-Assurer la sécurité de l’application et protéger les données des utilisateurs.
+L’objectif est de garantir la sécurité de l’application et la protection des données des utilisateurs.
 
-## 2. Authentification
 
-- Mise en place d’un système de connexion (login / mot de passe)
-- Protection des comptes utilisateurs
 
-## 3. Protection des données
+## Authentification et accès
 
-- Les données sensibles sont sécurisées
+- Mise en place d’un système de connexion (email + mot de passe)
+- Les utilisateurs doivent être authentifiés pour accéder à certaines fonctionnalités
+- Différents rôles :
+  - Utilisateur
+  - Gérant
+  - Administrateur
+
+
+
+## Protection des données
+
+- Les données sensibles (mots de passe) doivent être protégées
 - Respect du RGPD
+- Accès limité aux données selon le rôle
 
-## 4. Sécurité du serveur
+
+
+## Sécurité des entrées utilisateur
+
+- Vérification des données envoyées (formulaires)
+- Protection contre les injections (SQL, scripts)
+
+
+
+## Sécurité serveur
 
 - Utilisation de Node.js sécurisé
-- Limitation des accès
+- Accès limité au serveur
+- Mise à jour régulière
 
-## 5. Bonnes pratiques
 
-- Vérification des entrées utilisateur
-- Protection contre les attaques simples (ex : injections)
 
-## 6. Conclusion
+## Conclusion
 
-La sécurité est importante pour garantir la fiabilité de l’application.
+La sécurité est essentielle pour assurer la fiabilité et la confiance dans l’application.
