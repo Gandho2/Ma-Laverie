@@ -48,12 +48,4 @@ L'administrateur supervise l'ensemble du système et gère les utilisateurs.
 
 ---
 
-## Diagramme UML
-
-Le diagramme ci-dessous représente les interactions entre les acteurs et le système.
-
-![Diagramme UML](ma-laverie-use-case.drawio.png)
-
-
-
 
