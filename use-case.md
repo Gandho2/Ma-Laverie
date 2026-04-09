@@ -46,8 +46,6 @@ Les gérants peuvent mettre à jour les informations des laveries et des machine
 
 L'administrateur peut gérer les utilisateurs et superviser l'ensemble des données.
 
----
 
-## Diagramme
 
-![Diagramme UML](nom-de-ton-image.png)
+
