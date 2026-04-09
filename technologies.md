@@ -1,49 +1,59 @@
 # Choix des technologies — Ma Laverie
 
-## 1. Frontend
+## Objectif
 
-Technologie choisie : HTML, CSS, JavaScript
+Choisir des technologies adaptées au projet et à mon niveau.
+
+
+
+## Frontend
+
+Technologies :
+- HTML
+- CSS
+- JavaScript
 
 ### Justification :
-- Simple à utiliser
-- Adapté pour un débutant
-- Rapide à mettre en place
+- Simples à utiliser
+- Permettent de créer une interface web rapidement
+- Adaptées pour un projet étudiant
 
----
 
-## 2. Backend
+
+## Backend
 
 Technologie choisie : Node.js
 
-### Justification :
-- Facile à apprendre
-- Permet de créer une API simple
-- Compatible avec JavaScript
+### Comparaison :
 
----
+- Node.js :
+  - Facile à apprendre
+  - Rapide
+  - Utilise JavaScript
 
-## 3. Base de données
+- PHP :
+  - Plus ancien
+  - Moins moderne
+
+- Java :
+  - Très puissant
+  - Plus complexe
+
+Choix final : Node.js
+
+
+
+## Base de données
 
 Technologie choisie : MySQL
 
 ### Justification :
-- Base de données relationnelle
-- Simple et largement utilisée
-- Bonne pour stocker les données
+- Base relationnelle
+- Facile à comprendre
+- Utilisée dans beaucoup de projets
 
----
 
-## 4. Benchmark (comparaison)
-
-### Backend :
-- Node.js : simple et rapide ✔️
-- PHP : plus ancien
-- Java : plus complexe
-
-👉 Choix final : Node.js
-
----
 
 ## Conclusion
 
-Les technologies choisies sont simples, adaptées au projet et à mon niveau.
+Les technologies choisies sont simples, efficaces et adaptées au projet.
