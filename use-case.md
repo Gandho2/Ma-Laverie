@@ -44,7 +44,15 @@ L'application permet aux utilisateurs de consulter les informations des laveries
 
 Les gérants peuvent mettre à jour les informations des laveries et des machines.
 
-L'administrateur peut gérer les utilisateurs et superviser l'ensemble des données.
+L'administrateur supervise l'ensemble du système et gère les utilisateurs.
+
+---
+
+## Diagramme UML
+
+Le diagramme ci-dessous représente les interactions entre les acteurs et le système.
+
+![Diagramme UML](ma-laverie-use-case.drawio.png)
 
 
 
