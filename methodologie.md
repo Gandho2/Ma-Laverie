@@ -29,7 +29,7 @@ Les tâches sont organisées avec GitHub Projects sous forme de tableau :
 - To do
 - In progress
 - Done
-
+- backlog
 ## Conclusion
 
 Cette méthode me permet de mieux organiser mon travail et de suivre l’avancement du projet.
