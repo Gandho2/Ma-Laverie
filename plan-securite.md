@@ -1,45 +1,28 @@
-# Plan de sécurité — Ma Laverie
+## Protection des mots de passe
 
-## Objectif
+Les mots de passe ne sont pas stockés en clair.
 
-L’objectif est de garantir la sécurité de l’application et la protection des données des utilisateurs.
+Ils sont chiffrés (hashés) avant d’être enregistrés dans la base de données à l’aide d’une bibliothèque comme bcrypt.
 
+Cela permet d’éviter qu’un mot de passe soit lisible en cas de fuite de données.
 
+---
 
-## Authentification et accès
+## Respect du RGPD
 
-- Mise en place d’un système de connexion (email + mot de passe)
-- Les utilisateurs doivent être authentifiés pour accéder à certaines fonctionnalités
-- Différents rôles :
-  - Utilisateur
-  - Gérant
-  - Administrateur
+Le respect du RGPD est assuré par :
 
+- Limitation des données collectées (seulement les données nécessaires)
+- Possibilité pour l’utilisateur de supprimer son compte
+- Protection des données personnelles
+- Information de l’utilisateur sur l’utilisation de ses données
 
+---
 
-## Protection des données
+## Sécurité des formulaires
 
-- Les données sensibles (mots de passe) doivent être protégées
-- Respect du RGPD
-- Accès limité aux données selon le rôle
+Les données saisies par l’utilisateur sont vérifiées :
 
-
-
-## Sécurité des entrées utilisateur
-
-- Vérification des données envoyées (formulaires)
-- Protection contre les injections (SQL, scripts)
-
-
-
-## Sécurité serveur
-
-- Utilisation de Node.js sécurisé
-- Accès limité au serveur
-- Mise à jour régulière
-
-
-
-## Conclusion
-
-La sécurité est essentielle pour assurer la fiabilité et la confiance dans l’application.
+- Vérification des champs (email valide, mot de passe sécurisé)
+- Protection contre les injections SQL
+- Nettoyage des entrées utilisateur
