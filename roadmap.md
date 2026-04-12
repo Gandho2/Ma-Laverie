@@ -2,68 +2,64 @@
 
 ## Objectif
 
-La roadmap permet de planifier les différentes étapes du projet et de suivre son évolution dans le temps.
+Cette roadmap permet d’organiser le développement du projet étape par étape.
 
 
 
 ## Phase 1 : Analyse du besoin
 
-Objectif : comprendre le problème et définir les attentes des utilisateurs.
+Dans cette phase, j’ai cherché à comprendre le problème et les besoins des utilisateurs.
 
-Tâches :
-- Identifier les besoins des utilisateurs
-- Définir les fonctionnalités principales (laveries, machines, affluence)
-- Rédiger le cahier des charges
+Tâches réalisées :
+- Définition de l’idée du projet
+- Identification des fonctionnalités principales
+- Rédaction du cahier des charges
 
 
+## Phase 2 : Mise en place du projet
 
-## Phase 2 : Mise en place technique
+Cette phase consiste à préparer l’environnement de travail.
 
-Objectif : préparer l’environnement de travail.
-
-Tâches :
+Tâches réalisées :
 - Création du repository GitHub
 - Mise en place du Dockerfile
 - Mise en place du pipeline CI
-- Organisation du projet
+- Organisation des fichiers
+
 
 
 ## Phase 3 : Développement backend
 
-Objectif : créer la logique de l’application.
+Dans cette phase, je développe la logique de l’application.
 
-Tâches :
+Tâches prévues :
 - Installation de Node.js
 - Création du serveur
 - Mise en place des routes API
-- Gestion des données
+- Mise en place de la base de données pour stocker les informations (laveries, machines, utilisateurs)
 
 
+## Phase 4 : Développement des fonctionnalités
 
-## Phase 4 : Développement des fonctionnalités principales
+Cette phase permet de rendre l’application utilisable.
 
-Objectif : rendre l’application utilisable.
-
-Tâches :
+Tâches prévues :
 - Affichage des laveries
 - Affichage des machines disponibles
 - Affichage des tarifs
 - Affichage de l’affluence
 
 
+## Phase 5 : Améliorations
 
-## Phase 5 : Améliorations et évolution
+Dans cette phase, le projet sera amélioré.
 
-Objectif : améliorer l’application.
-
-Tâches :
-- Ajout d’une base de données
-- Création de comptes utilisateurs
-- Sécurisation de l’application
-- Optimisation des performances
-
+Tâches prévues :
+- Ajout des comptes utilisateurs
+- Amélioration de la sécurité
+- Optimisation de l’application
 
 
 ## Conclusion
 
-Cette roadmap permet de structurer le projet et d’avancer étape par étape de manière organisée.
+Cette roadmap me permet de suivre une progression logique dans le développement du projet et d’éviter de travailler de manière désorganisée.
