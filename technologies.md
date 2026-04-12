@@ -4,7 +4,7 @@
 |------------|----------|--------------|
 | Node.js | Facile à apprendre, rapide, JavaScript partout | Moins structuré |
 | PHP | Très utilisé, simple | Moins moderne |
-| Java | Très puissant, sécurisé | Complexe pour débutant |
+| Java | Très puissant, sécurisé | Complexe selon moi |
 
 ---
 
