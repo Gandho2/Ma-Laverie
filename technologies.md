@@ -1,59 +1,17 @@
-# Choix des technologies — Ma Laverie
+## Benchmark des technologies backend
 
-## Objectif
+| Technologie | Avantages | Inconvénients |
+|------------|----------|--------------|
+| Node.js | Facile à apprendre, rapide, JavaScript partout | Moins structuré |
+| PHP | Très utilisé, simple | Moins moderne |
+| Java | Très puissant, sécurisé | Complexe pour débutant |
 
-Choisir des technologies adaptées au projet et à mon niveau.
+---
 
+## Justification du choix
 
+J’ai choisi Node.js car il est plus adapté à mon niveau.
 
-## Frontend
+Il permet de développer rapidement une application avec JavaScript, ce qui simplifie le projet.
 
-Technologies :
-- HTML
-- CSS
-- JavaScript
-
-### Justification :
-- Simples à utiliser
-- Permettent de créer une interface web rapidement
-- Adaptées pour un projet étudiant
-
-
-
-## Backend
-
-Technologie choisie : Node.js
-
-### Comparaison :
-
-- Node.js :
-  - Facile à apprendre
-  - Rapide
-  - Utilise JavaScript
-
-- PHP :
-  - Plus ancien
-  - Moins moderne
-
-- Java :
-  - Très puissant
-  - Plus complexe
-
-Choix final : Node.js
-
-
-
-## Base de données
-
-Technologie choisie : MySQL
-
-### Justification :
-- Base relationnelle
-- Facile à comprendre
-- Utilisée dans beaucoup de projets
-
-
-
-## Conclusion
-
-Les technologies choisies sont simples, efficaces et adaptées au projet.
+De plus, il est largement utilisé pour créer des API web modernes.
