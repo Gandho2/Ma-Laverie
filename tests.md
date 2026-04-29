@@ -70,5 +70,14 @@ Ils vérifient la communication entre :
 
 - Permet de détecter les erreurs rapidement
 - Améliore la qualité du code
+
+## Résultat des tests
+
+Les tests ont été exécutés avec succès.
+
+- 2 tests réalisés
+- 2 tests validés
+
+Les résultats montrent que la fonctionnalité de réservation fonctionne correctement dans les cas normaux et en cas d'erreur.
 - Assure le bon fonctionnement de l'application
 - Facilite les évolutions futures
