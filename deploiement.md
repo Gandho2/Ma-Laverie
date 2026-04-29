@@ -2,24 +2,42 @@
 
 ## Objectif
 
-Mettre l'application en ligne de manière simple et reproductible.
+Déployer l'application dans un environnement de test (staging) avant mise en production.
+
+
 
 ## Solution choisie
 
-Utilisation de Docker pour garantir un environnement identique.
+Dans ce projet, un déploiement simple est utilisé :
+
+- exécution en local (localhost)
+- possibilité de déploiement sur plateforme cloud (Render, Railway)
+
+
 
 ## Étapes
 
-1. Création de l'image Docker
-2. Lancement du conteneur
-3. Exposition du port 3000
+1. Installer les dépendances :
+   npm install
 
-## Commandes
+2. Lancer le serveur :
+   node index.js
 
-docker build -t ma-laverie .
-docker run -p 3000:3000 ma-laverie
+3. Accéder à l'application :
+   http://localhost:3000
 
-## Améliorations
+4. Tester les fonctionnalités avec Postman
 
-- Déploiement sur un cloud 
-- CI/CD avec GitHub Actions
+
+
+## Limites actuelles
+
+- Pas encore de serveur VPS
+- Pas encore de base de données réelle
+
+
+
+## Améliorations futures
+
+- Déploiement sur serveur distant
+- Mise en place CI/CD
