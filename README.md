@@ -69,6 +69,17 @@ Documents de conception :
 - Maquettes
 
 ---
+# Captures du projet
+
+## Liste des machines
+
+![Liste machines](machines-api.png)
+
+---
+
+## Réservation confirmée
+
+![Reservation](reservation-confirmee.png)
 
 # Fonctionnalités développées
 
