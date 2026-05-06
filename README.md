@@ -53,6 +53,13 @@ Lien du board : https://github.com/users/Gandho2/projects/1/views/1
 ```bash
 git clone https://github.com/gandho2/ma-laverie.git
 cd ma-laverie
-```bash
+```bash 
+## Tests
+
+Les tests peuvent être lancés avec la commande :
+
+npm test
+
+Les tests vérifient le bon fonctionnement de la réservation.
 
 cd ma-laverie
