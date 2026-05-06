@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ma Laverie</title>
+</head>
+
+<body>
+
+  <h1>Réserver une machine</h1>
+
+  <input type="number" id="machineId" placeholder="ID Machine">
+  <br><br>
+
+  <input type="number" id="userId" placeholder="ID Utilisateur">
+  <br><br>
+
+  <button onclick="reserver()">Réserver</button>
+
+  <h2 id="resultat"></h2>
+
+  <script>
+
+    async function reserver() {
+
+      const machineId =
+        document.getElementById("machineId").value;
+
+      const userId =
+        document.getElementById("userId").value;
+
+      try {
+
+        const response = await fetch(
+          "http://localhost:3000/reservation",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+              machineId: Number(machineId),
+              userId: Number(userId)
+            })
+          }
+        );
+
+        const data = await response.json();
+
+        console.log(data);
+
+        document.getElementById("resultat").innerText =
+          data.message;
+
+      } catch (error) {
+
+        console.error(error);
+
+        document.getElementById("resultat").innerText =
+          "Erreur connexion serveur";
+
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
