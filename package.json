@@ -12,6 +12,7 @@
     "cors": "^2.8.6",
     "express": "^5.2.1",
     "jest": "^30.3.0",
+    "mysql2": "^3.22.3",
     "supertest": "^7.2.2"
   },
   "description": ""

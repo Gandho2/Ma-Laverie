@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const mysql = require('mysql2');
 
 const app = express();
 
@@ -7,15 +8,25 @@ app.use(cors());
 app.use(express.json());
 
 // ==============================
-// DONNÉES
+// CONNEXION BASE DE DONNÉES
 // ==============================
 
-let machines = [
-  { id: 1, etat: "libre" },
-  { id: 2, etat: "occupée" }
-];
+const db = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: '',
+  database: 'ma_laverie'
+});
 
-let reservations = [];
+db.connect((err) => {
+  if (err) {
+    console.log("Erreur connexion BDD");
+    console.error(err);
+    return;
+  }
+
+  console.log("Connecté à MySQL");
+});
 
 // ==============================
 // ROUTE PRINCIPALE
@@ -26,11 +37,25 @@ app.get('/', (req, res) => {
 });
 
 // ==============================
-// VOIR MACHINES
+// VOIR MACHINES (BDD)
 // ==============================
 
 app.get('/machines', (req, res) => {
-  res.json(machines);
+
+  const sql = "SELECT * FROM machines";
+
+  db.query(sql, (err, result) => {
+
+    if (err) {
+      return res.status(500).json({
+        message: "Erreur base de données"
+      });
+    }
+
+    res.json(result);
+
+  });
+
 });
 
 // ==============================
@@ -49,31 +74,50 @@ app.post('/reservation', (req, res) => {
     });
   }
 
-  const machine = machines.find(
-    m => m.id == machineId
-  );
+  // Vérifier si la machine existe
+  const sqlCheck =
+    "SELECT * FROM machines WHERE id = ?";
 
-  if (!machine) {
-    return res.status(404).json({
-      message: "Machine non trouvée"
+  db.query(sqlCheck, [machineId], (err, result) => {
+
+    if (err) {
+      return res.status(500).json({
+        message: "Erreur base de données"
+      });
+    }
+
+    if (result.length === 0) {
+      return res.status(404).json({
+        message: "Machine non trouvée"
+      });
+    }
+
+    const machine = result[0];
+
+    if (machine.etat === "occupée") {
+      return res.status(400).json({
+        message: "Machine déjà occupée"
+      });
+    }
+
+    // Mettre la machine en occupée
+    const sqlUpdate =
+      "UPDATE machines SET etat = 'occupée' WHERE id = ?";
+
+    db.query(sqlUpdate, [machineId], (err) => {
+
+      if (err) {
+        return res.status(500).json({
+          message: "Erreur mise à jour machine"
+        });
+      }
+
+      res.json({
+        message: "Réservation confirmée"
+      });
+
     });
-  }
 
-  if (machine.etat === "occupée") {
-    return res.status(400).json({
-      message: "Machine déjà occupée"
-    });
-  }
-
-  machine.etat = "occupée";
-
-  reservations.push({
-    machineId,
-    userId
-  });
-
-  res.json({
-    message: "Réservation confirmée"
   });
 
 });
@@ -84,4 +128,4 @@ app.post('/reservation', (req, res) => {
 
 app.listen(3000, () => {
   console.log("Serveur lancé");
-}); 
+});
