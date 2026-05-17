@@ -25,7 +25,7 @@ const db = mysql.createConnection({
 
 db.connect((err) => {
   if (err) {
-    console.error("❌ Erreur connexion MySQL :", err);
+    console.error(" Erreur connexion MySQL :", err);
     return;
   }
 
@@ -139,9 +139,63 @@ app.post('/reservation', (req, res) => {
 });
 
 // ==============================
+// LIBÉRER UNE MACHINE
+// ==============================
+
+app.put('/machine/:id/liberer', (req, res) => {
+
+  const machineId = req.params.id;
+
+  // Vérifier si machine existe
+  const sqlCheck =
+    'SELECT * FROM machines WHERE id = ?';
+
+  db.query(sqlCheck, [machineId], (err, result) => {
+
+    if (err) {
+      console.error(err);
+
+      return res.status(500).json({
+        message: 'Erreur base de données'
+      });
+    }
+
+    // Machine inexistante
+    if (result.length === 0) {
+      return res.status(404).json({
+        message: 'Machine non trouvée'
+      });
+    }
+
+    // Libérer machine
+    const sqlUpdate =
+      "UPDATE machines SET etat = 'libre' WHERE id = ?";
+
+    db.query(sqlUpdate, [machineId], (err) => {
+
+      if (err) {
+        console.error(err);
+
+        return res.status(500).json({
+          message: 'Erreur mise à jour machine'
+        });
+      }
+
+      res.status(200).json({
+        message: 'Machine libérée avec succès',
+        machineId
+      });
+
+    });
+
+  });
+
+});
+
+// ==============================
 // LANCEMENT SERVEUR
 // ==============================
 
 app.listen(PORT, () => {
-  console.log(` Serveur lancé sur http://localhost:${PORT}`);
+  console.log(`Serveur lancé sur http://localhost:${PORT}`);
 });
